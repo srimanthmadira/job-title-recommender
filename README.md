@@ -31,6 +31,7 @@ The Job Recommendation System is a Flask-based web application that helps users 
 # Preview 
 ![image](https://github.com/user-attachments/assets/be1aa51c-a34d-4381-b147-0e554722736c)
 
-![image](https://github.com/user-attachments/assets/51efd242-9213-4e0d-a923-f5c88506e77c)
+![image](https://github.com/user-attachments/assets/124d3a8b-d2d2-43fc-952f-ce2f45e59034)
+
 
 
