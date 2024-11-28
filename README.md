@@ -27,6 +27,9 @@ The Job Recommendation System is a Flask-based web application that helps users 
 - **Skill-Based Job Matching:** Users input their skills, and the app recommends jobs based on skill similarity.
 - **Skill Match Percentage:** Each job recommendation comes with a skill match percentage, giving users a sense of how well their skills align with the job requirements.
 - **Additional Skill Insights:** Along with recommended jobs, the app displays any additional skills required for each role, allowing users to identify skill gaps.
+- **Job Roadmaps:** A dedicated section with comprehensive career roadmaps for various tech roles, providing guidance for skill-building and career advancement.
+- **Latest Job Insights:** A feature showcasing trends, analytics, and market insights about the latest job opportunities, helping users stay informed.
+
 
 # Preview 
 ![image](https://github.com/user-attachments/assets/03d7c564-d9b7-4671-a214-d5175f04d888)
