@@ -29,9 +29,10 @@ The Job Recommendation System is a Flask-based web application that helps users 
 - **Additional Skill Insights:** Along with recommended jobs, the app displays any additional skills required for each role, allowing users to identify skill gaps.
 
 # Preview 
-![image](https://github.com/user-attachments/assets/be1aa51c-a34d-4381-b147-0e554722736c)
+![image](https://github.com/user-attachments/assets/03d7c564-d9b7-4671-a214-d5175f04d888)
+![image](https://github.com/user-attachments/assets/852d9550-1a55-4281-90be-d49847cb4bc8)
+![image](https://github.com/user-attachments/assets/3a1e5797-58db-4b59-a082-a06fa2b9c7d4)
 
-![image](https://github.com/user-attachments/assets/124d3a8b-d2d2-43fc-952f-ce2f45e59034)
 
 
 
