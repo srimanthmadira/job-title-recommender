@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Recommendation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_recommendation_page.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Recommendation System</h1>
+        <form method="POST">
+            <label for="skills">Enter your skills (separated by commas):</label>
+            <input type="text" id="skills" name="skills" placeholder="e.g., Python, SQL, Excel" required>
+            <div class="button-container">
+                <button>Get Recommendations</button>
+            </div>
+            
+        </form>
+
+        {% if input_skills %}
+        <div class="user-skills">
+            <h3>Your Entered Skills:</h3>
+            <p><strong>{{ input_skills }}</strong></p>
+        </div>
+        {% endif %}
+
+        {% if recommended_jobs %}
+        <div class="results">
+            <h2>Recommended Jobs :</h2>
+            {% for job in recommended_jobs %}
+                <div class="job">
+                    <h3>{{ job.jobtitle }}</h3>
+                    <p>User Skill Match: {{ job.user_match_percentage }}%</p>
+                    <p>Required Skill Match: {{ job.required_match_percentage }}%</p>
+                    <p>Other Required Skills: {{ job.other_required_skills }}</p>
+                    <div class="dropdown" onclick="toggleDropdown('{{ job.jobtitle }}')">More Info ▼</div>
+                    <div id="{{ job.jobtitle }}" class="dropdown-content">
+                        <p><strong>Company:</strong> {{ job.company }}</p>
+                        <p><strong>Employment Type:</strong> {{ job.employment_type }}</p>
+                        <p><strong>Location:</strong> {{ job.city}}, {{job.state }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        function toggleDropdown(jobTitle) {
+            var content = document.getElementById(jobTitle);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
