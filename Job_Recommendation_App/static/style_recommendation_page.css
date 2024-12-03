@@ -1,0 +1,298 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1b1141; /* Light background matching trends page */
+    color: #1b1141;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease-in; /* Page fade-in effect */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    animation: slideIn 1s ease-in-out; /* Slide-in effect for the container */
+}
+
+h1 {
+    text-align: center;
+    color: #e8e9ec; /* Dark Green */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1.5s ease-out; /* Fade-in from the top */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #15104f; /* Light gray border */
+    transition: border-color 0.3s, transform 0.3s ease; /* Transition for smooth focus effects */
+    font-size: 1.2em;
+}
+
+input[type="text"]:focus {
+    border-color: #1b1141; /* Dark Green focus border */
+    outline: none;
+    transform: scale(1.02); /* Slight zoom on focus */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Ensure it takes full width */
+    margin-top: 20px; /* Optional: Space above the button */
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px; /* Reduced padding */
+    border: none;
+    background-color: #f0f6f3; /* Light Green */
+    color: rgb(39, 24, 89);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease; /* Smooth hover animations */
+    font-size: 1.1em; /* Reduced font size */
+    font-weight: bold;
+    width: 270px; /* Fixed width */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 2px solid #f9fbfa;
+    animation: bounceIn 1s ease-in-out; /* Bounce-in animation */
+}
+
+button:hover {
+    background-color: #1b1141;
+    color: #eef5f1;  /* Green text on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    transform: translateY(-3px);
+}
+
+.results {
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-out; /* Fade-in from bottom */
+}
+
+h2 {
+    color: #e8e9ec;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    animation: fadeInRight 1.2s ease-in; /* Slide-in from right */
+}
+
+.job {
+    background-color: #f4f3f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, transform 0.3s ease; /* Smooth hover and zoom */
+    animation: zoomIn 1s ease-out; /* Zoom-in effect */
+}
+
+.job:hover {
+    background-color: #f6f5f8; /* Light gray on hover */
+    transform: scale(1.03); /* Slight zoom on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.user-skills {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fafafb;
+    border-radius: 8px;
+    font-size: 1.2em;
+    animation: fadeInLeft 1s ease-out; /* Slide-in from left */
+}
+
+.dropdown {
+    cursor: pointer;
+    margin-top: 10px;
+    color: #1e2a47; /* Dark Green */
+    font-weight: bold;
+    font-size: 1.2em;
+    animation: pulse 2s infinite; /* Subtle pulsing effect */
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #ecf0f1; /* Light gray background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 1em;
+    animation: fadeIn 0.5s ease-in; /* Fade-in on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    input[type="text"],
+    button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .job {
+        padding: 15px;
+    }
+
+    .user-skills {
+        font-size: 1em;
+    }
+
+    .dropdown {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .job {
+        padding: 12px;
+    }
+
+    .user-skills {
+        font-size: 0.9em;
+    }
+
+    .dropdown {
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Market Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style_insights_page.css') }}" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Job Market Insights</h1>
+        </header>
+
+        <section class="cards">
+            <!-- Top Cities -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Top Cities with Job Listings</h2>
+                    <button class="toggle-btn" onclick="toggleSection('cityCollapse')">View</button>
+                </div>
+                <div id="cityCollapse" class="collapse">
+                    <ul>
+                        {% for city in top_7_cities %}
+                        <li>{{ city }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Top States -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Top States with Job Listings</h2>
+                    <button class="toggle-btn" onclick="toggleSection('stateCollapse')">View</button>
+                </div>
+                <div id="stateCollapse" class="collapse">
+                    <ul>
+                        {% for state in top_5_states %}
+                        <li>{{ state }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Top Skills -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Top Skills in Job Market</h2>
+                    <button class="toggle-btn" onclick="toggleSection('skillsCollapse')">View</button>
+                </div>
+                <div id="skillsCollapse" class="collapse">
+                    <ul>
+                        {% for skill in top_skills %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Common Job Titles -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Top Job Titles</h2>
+                    <button class="toggle-btn" onclick="toggleSection('titleCollapse')">View</button>
+                </div>
+                <div id="titleCollapse" class="collapse">
+                    <ul>
+                        {% for jobtitle in most_common_jobtitles %}
+                        <li>{{ jobtitle }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <a href="/recommendation" class="cta-btn">Try Job Recommendation System</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Job Market Insights</p>
+    </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

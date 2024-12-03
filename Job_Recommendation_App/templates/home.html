@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='home.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Entry Level Job Navigator</h1>
+    <p>Your go-to platform for finding jobs tailored to your skills and aspirations.</p>
+    <div class="button-container">
+        <a href="/recommendation" class="btn" style="--btn-index: 1;">Job Recommendation System</a>
+        <a href="/insights" class="btn" style="--btn-index: 2;">Latest Job Insights</a>
+        <a href="https://roadmap.sh/roadmaps" class="btn" style="--btn-index: 3;" target="_blank">Job Roadmaps</a>
+    </div>
+    <footer>
+        &copy; 2024 Job Portal. All rights reserved.
+    </footer>
+</body>
+</html>
